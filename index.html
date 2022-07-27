@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico"/>
+    <link rel="stylesheet" href="./assents/css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <!--calculator-->
+    <div class="calculator">
+
+        <!--display-->
+        <div class="display">
+            <input id="display" placeholder="0" disabled>
+            <h2 id="history"></h2>
+        </div>
+
+        <!--button-->
+        <div class="row">
+            <button class="button purple-text" onclick="limpar()">AC</button>
+            <div></div>
+            <div></div>
+            <button class="button gray" onclick="add_operator('/')">/</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_number(7)">7</button>
+            <button class="button" onclick="add_number(8)">8</button>
+            <button class="button" onclick="add_number(9)">9</button>
+            <button class="button gray" onclick="add_operator('*')">*</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_number(4)">4</button>
+            <button class="button" onclick="add_number(5)">5</button>
+            <button class="button" onclick="add_number(6)">6</button>
+            <button class="button gray" onclick="add_operator('-')">-</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_number(1)">1</button>
+            <button class="button" onclick="add_number(2)">2</button>
+            <button class="button" onclick="add_number(3)">3</button>
+            <button class="button gray" onclick="add_operator('+')">+</button>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="add_number(0)">0</button>
+            <button class="button" onclick="add_number('.')">.</button>
+            <button class="button puple" onclick="total()">=</button>
+        </div>
+
+            <!-- LINK TO GITHUB PROJECT -->
+        <div class="github">
+            <a href="https://github.com/iaematt/calculator" target="_blank" title="Code in GitHub">
+                <img src="./assents/img/github.svg" width="35" alt="Code I=in GitHub"/>
+            </a>
+        </div>
+
+        <footer class="credits">
+            <p>&copy; Dev criador: Patrick Nascimento</p>
+            <a href="https://www.linkedin.com/in/patrick-nascimento-585815230/" target="_blank" title="My Linkedin">
+                <img src="./assents/img/logo-linkedin.png" width="45" alt="Linkedin">
+            </a>
+        </footer>
+
+        <script src="./assents/js/script.js"></script>
+    </div>
+</body>
+</html>

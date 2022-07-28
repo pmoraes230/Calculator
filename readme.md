@@ -3,4 +3,4 @@
 calculadora feita para testar a minha habilidades na linguagem.
 
 ## link úteis.
-repositório na qual peguei inspiração [repositório de inspiração](https://github.com/iaematt/calculator)
+repositório na qual peguei inspiração [site de onde tirei inspiração](https://programadoresdepre.com.br/como-criar-uma-calculadora-com-html-css-e-javascript/)

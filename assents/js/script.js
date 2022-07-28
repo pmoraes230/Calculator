@@ -1,75 +1,26 @@
-var input = document.querySelector('#display');
-var operator = "";
-var parar = false;
-
-function limpar() {
-    input.value = "";
-    document.querySelector('#history').innerHTML = "";
-    operator = "";
+//enter numbers to calculate
+function insert(num) {
+    let number = document.getElementById('result').innerHTML;
+    document.getElementById('result').innerHTML = number + num;
 }
 
-function add_number(string) {
-    if(!parar) {
-        if (string === '.' && input.value.indexOf('.') === -1 || string !== '.') {
-            input.value = input.value + string;
-            history.value = input.value;
-        }
-    }else {
-        if (string === '.' && input.value.indexOf('.') === -1 || string !== '.') {
-            input.value = "";
-            parar = false;
-            document.querySelector('#history').innerHTML = "";
-            operator = "";
-            input.value = input.value + string;
-        }
-    }
+// clear errors
+function clear() {
+    document.getElementById('result').innerHTML = "";
 }
 
-function add_number(op) {
-    if (input.value == "") {
-        input.value = "0";
-    }
+//back action
+function back() {
+    let result = document.getElementById('result').innerHTML;
+    document.getElementById('result').innerHTML = result.substring(0, result.length -1);
+}
 
-    if (operator == "") {
-        operator = op;
-        input.value = input.value + op;
+//calculator
+function calculate() {
+    let result = document.getElementById('result').innerHTML;
+    if(result) {
+        document.getElementById('result').innerHTML = eval(result);    
     } else {
-        total()
-        input.value = input.value + op;
-        operator = op;
-        parar=false;
-    }
-}
-
-function total() {
-    if (!parar) {
-      numeros = input.value.split(operator);
-  
-      if (numeros[1] == "") {
-        input.value = input.value + '0';
-        numeros[1] = 0;
-  
-      }
-  
-      document.querySelector("#history").innerHTML = input.value;
-  
-      switch (operator) {
-        case "+":
-          input.value = Number(numeros[0]) + Number(numeros[1]);
-          break;
-  
-        case "-":
-          input.value = numeros[0] - numeros[1];
-          break;
-  
-        case "*":
-          input.value = numeros[0] * numeros[1];
-          break;
-  
-        case "/":
-          input.value = numeros[0] / numeros[1];
-          break;
-      }
-        parar = true;
+        document.getElementById('result').innerHTML = 'anything...'
     }
 }

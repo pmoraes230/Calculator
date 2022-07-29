@@ -6,7 +6,7 @@ function insert(num) {
 
 // clear errors
 function clear() {
-    document.getElementById('result').innerHTML = "";
+    document.getElementById('result').innerHTML = '';
 }
 
 //back action
